@@ -1,10 +1,8 @@
+<<<<<<< HEAD
 # DealDrop - Smart Product Price Tracker
-### Watch here - https://youtu.be/HakXg-hFZ_c
-
 Track product prices across e-commerce sites and get alerts on price drops. Built with Next.js, Firecrawl, and Supabase.
 
 ## 🎯 Features
-
 - 🔍 **Track Any Product** - Works with Amazon, Zara, Walmart, and more
 - 📊 **Price History Charts** - Interactive graphs showing price trends over time
 - 🔐 **Google Authentication** - Secure sign-in with Google OAuth
@@ -12,7 +10,6 @@ Track product prices across e-commerce sites and get alerts on price drops. Buil
 - 📧 **Email Alerts** - Get notified when prices drop via Resend
 
 ## 🛠️ Tech Stack
-
 - **Next.js 16** - React framework with App Router
 - **Firecrawl** - Web data extraction API
   - Handles JavaScript rendering
@@ -30,7 +27,6 @@ Track product prices across e-commerce sites and get alerts on price drops. Buil
 - **Tailwind CSS** - Styling
 
 ## 📋 Prerequisites
-
 Before you begin, ensure you have:
 
 - Node.js 18+ installed
@@ -42,7 +38,6 @@ Before you begin, ensure you have:
 ## 🚀 Setup Instructions
 
 ### 1. Clone and Install
-
 ```bash
 git clone https://github.com/piyush-eon/smart-product-price-tracker.git
 cd smart-product-price-tracker
@@ -50,14 +45,11 @@ npm install
 ```
 
 ### 2. Supabase Setup
-
 #### Create Project
-
 1. Create a new project at [supabase.com](https://supabase.com)
 2. Wait for the project to be ready
 
 #### Run Database Migrations
-
 Go to SQL Editor in your Supabase dashboard and run these migrations:
 
 **Migration 1: Database Schema** (`supabase/migrations/001_schema.sql`)
@@ -165,7 +157,6 @@ SELECT cron.schedule(
 **Note:** Update the URL and Authorization Bearer token in the function after deployment.
 
 #### Enable Google Authentication
-
 1. Go to **Authentication** → **Providers** in Supabase
 2. Enable **Google** provider
 3. Get OAuth credentials from [Google Cloud Console](https://console.cloud.google.com/):
@@ -176,25 +167,21 @@ SELECT cron.schedule(
 4. Copy Client ID and Client Secret to Supabase
 
 #### Get API Credentials
-
 1. Go to **Settings** → **API**
 2. Copy your **Project URL**
 3. Copy your **anon/public** key
 4. Copy your **service_role** key (keep this secret!)
 
 ### 3. Firecrawl Setup
-
 1. Sign up at [firecrawl.dev](https://firecrawl.dev)
 2. Go to dashboard and get your API key
 
 ### 4. Resend Setup
-
 1. Sign up at [resend.com](https://resend.com)
 2. Get your API key from the dashboard
 3. (Optional) Add and verify your domain for custom email addresses
 
 ### 5. Environment Variables
-
 Create `.env.local` in the root directory:
 
 ```env
@@ -224,11 +211,9 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
 ### 6. Run Development Server
-
 ```bash
 npm run dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000)
 
 ## 📦 Deployment
@@ -355,103 +340,19 @@ dealdrop/
 └── .env.local                          # Environment variables
 ```
 
-## 🧪 Testing
-
-### Test with cURL
-
-```bash
-curl -X POST https://your-app.vercel.app/api/cron/check-prices \
-  -H "Authorization: Bearer your_cron_secret" \
-  -H "Content-Type: application/json"
-```
-
-### Verify Cron Job
-
-Check if cron is scheduled:
-
-```sql
-SELECT * FROM cron.job;
-```
-
-View cron run history:
-
-```sql
-SELECT * FROM cron.job_run_details
-ORDER BY start_time DESC
-LIMIT 10;
-```
-
-## 🎨 Customization
-
-### Change Cron Schedule
-
-Edit the cron expression in `002_setup_cron.sql`:
-
-```sql
--- Daily at 9 AM UTC
-'0 9 * * *'
-
--- Every 6 hours
-'0 */6 * * *'
-
--- Daily at 9 AM and 9 PM
-'0 9,21 * * *'
-
--- Every Monday at 9 AM
-'0 9 * * 1'
-```
-
 ### Email Template
-
 Customize the email template in `lib/email.js` - modify HTML, styling, or content.
 
 ### Add More Product Data
-
 Update the Firecrawl prompt in `lib/firecrawl.js` to extract additional fields:
 
 ```javascript
 prompt: "Extract product name, price, currency, image URL, brand, rating, and availability";
 ```
 
-## 🐛 Troubleshooting
-
-### Products not found in cron job
-
-- Make sure `SUPABASE_SERVICE_ROLE_KEY` is set in Vercel
-- Service role bypasses RLS to access all products
-
-### Firecrawl extraction fails
-
-- Some sites may be difficult to scrape
-- Check Firecrawl dashboard for error logs
-- Try adjusting the extraction prompt
-
-### Email alerts not sending
-
-- Verify `RESEND_API_KEY` is correct
-- Check Resend dashboard for delivery logs
-- Ensure sender email is verified (for custom domains)
-
-### Cron job not running
-
-- Check cron job exists: `SELECT * FROM cron.job;`
-- Verify the function URL and Authorization header are correct
-- Check Supabase logs for errors
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ---
 
-Built with ❤️ by RoadsideCoder using Next.js, Firecrawl, and Supabase
+Built with ❤️ by Abdul using Next.js, Firecrawl, and Supabase
+=======
+# DealDrop
+>>>>>>> 344fd14ed6da2039ff57ae09f2cf12f4d91e9e70
