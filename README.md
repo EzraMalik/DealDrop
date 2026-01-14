@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # DealDrop - Smart Product Price Tracker
 Track product prices across e-commerce sites and get alerts on price drops. Built with Next.js, Firecrawl, and Supabase.
 
@@ -353,6 +352,3 @@ prompt: "Extract product name, price, currency, image URL, brand, rating, and av
 ---
 
 Built with ❤️ by Abdul using Next.js, Firecrawl, and Supabase
-=======
-# DealDrop
->>>>>>> 344fd14ed6da2039ff57ae09f2cf12f4d91e9e70
